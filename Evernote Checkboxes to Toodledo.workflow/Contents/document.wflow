@@ -51,7 +51,42 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>tell application "Evernote"		set td_email to "bachya1208.923684@toodledo.com"	set tag_toSend to "toodledo"	set tag_complete to "toodledo-complete"		set en_notes to find notes "tag:" &amp; tag_toSend &amp; " todo:false"		repeat with en_note in en_notes		set the_ENML to get ENML content of en_note		set checkbox_string to do shell script "echo " &amp; quoted form of the_ENML &amp; " | grep -E '&lt;en-todo/&gt;[^&lt;]*' | sed -e 's/&lt;[^&gt;]*&gt;//g'"				set checkboxes to paragraphs of checkbox_string		repeat with checkbox in checkboxes			tell application "Mail"				tell (make new outgoing message) in front window					set visible to false					make new recipient at end of to recipients with properties {address:td_email}					set subject to checkbox					set content to checkbox					send				end tell			end tell		end repeat				assign tag tag_complete to en_note		unassign tag tag_toSend from en_note	end repeat	end tell</string>
+					<string>(*
+Evernote Checkboxes to Toodledo
+
+### DESCRIPTION
+
+An action that sends unchecked checkboxes from selected Evernote
+notes to Toodledo.
+
+For more implementation details, see this blog post:
+http://www.bachyaproductions.com/2014/01/toodledo-tasks-via-evernote-checkboxes/
+
+### INSTALLATION
+
+  1. Download the .workflow file somewhere on your filesystem.
+  2. Double click on it.
+  3. You should be good to go. :)
+
+### LICENSE
+
+(The MIT License)
+
+Copyright © 2014 Aaron Bach bachya1208@gmail.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Version 1.0
+February 8, 2014
+*)tell application "Evernote"		(* 
+   ======================================
+   // USER SWITCHES 
+   ======================================
+   *)		-- The user's Toodledo email address	set td_email to "user.1234@toodledo.com"		-- The Evernote tag that denotes notes to scan	-- for empty checkboxes	set tag_toSend to "toodledo"		-- The Evernote tag that gets set after this	-- action is run	set tag_complete to "toodledo-complete"		set en_notes to find notes "tag:" &amp; tag_toSend &amp; " todo:false"		repeat with en_note in en_notes		set the_ENML to get ENML content of en_note		set checkbox_string to do shell script "echo " &amp; quoted form of the_ENML &amp; " | grep -E '&lt;en-todo/&gt;[^&lt;]*' | sed -e 's/&lt;[^&gt;]*&gt;//g'"				set checkboxes to paragraphs of checkbox_string		repeat with checkbox in checkboxes			tell application "Mail"				tell (make new outgoing message) in front window					set visible to false					make new recipient at end of to recipients with properties {address:td_email}					set subject to checkbox					set content to checkbox					send				end tell			end tell		end repeat				assign tag tag_complete to en_note		unassign tag tag_toSend from en_note	end repeat	end tell</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
