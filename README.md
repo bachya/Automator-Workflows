@@ -4,8 +4,8 @@ Automator Workflows
 A collection of Automator workflows that I find useful. They are mostly aimed at making me more productive
 
 ## List of Actions
-* **`Add Emails to Toodledo.workflow`**<br/>Sends selected emails to Toodledo (making them "todo" items) and files them in Mail
-* `Evernote Checkboxes to Toodledo.workflow`: scans specifically-tagged Evernote notes for unchecked checkboxes and, upon finding them, sends them as todos to Evernote
+* **Add Emails to Toodledo**<br/>Sends selected emails to Toodledo (making them "todo" items) and files them in Mail
+* **Evernote Checkboxes to Toodledo**<br/>Scans specifically-tagged Evernote notes for unchecked checkboxes and, upon finding them, sends them as todos to Evernote
 
 ## Installation
 
