@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>381</string>
+	<key>AMApplicationVersion</key>
+	<string>2.4</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.mail.message-object</string>
+						<string>com.apple.mail.mailbox-object</string>
+						<string>com.apple.mail.account-object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>2.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Mail</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>itemType</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.mail.message-object</string>
+						<string>com.apple.mail.mailbox-object</string>
+						<string>com.apple.mail.account-object</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>AMSelectedInputType</key>
+				<string>com.apple.mail.message-object</string>
+				<key>AMSelectedOutputType</key>
+				<string>com.apple.mail.message-object</string>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Selected Mail Items 2.action</string>
+				<key>ActionName</key>
+				<string>Get Selected Mail Messages</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>itemType</key>
+					<string>com.apple.mail.message-object</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Get_Selected_Mail_Items_2</string>
+				<key>CFBundleVersion</key>
+				<string>2.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryMail</string>
+				</array>
+				<key>Class Name</key>
+				<string>Get_Selected_Mail_Items_2</string>
+				<key>InputUUID</key>
+				<string>2207F9E9-9790-4AB2-B0B7-9BEAFBAAFFFB</string>
+				<key>Keywords</key>
+				<array/>
+				<key>OutputUUID</key>
+				<string>13266700-755E-4075-84EC-3BE934E77BF2</string>
+				<key>UUID</key>
+				<string>2BBD4479-BD69-42E1-98DD-A11D9F979281</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Mail</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>com.apple.mail.message-object</string>
+						<key>name</key>
+						<string>itemType</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>442.000000:436.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Selected Mail Items 2.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>Run AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>(*Emails to My Todo System of Choice### DESCRIPTIONA simple script aimed at working with "todo" emails. The scriptaccomplishes two things:  1. An Omnifocus task is created related to the email  2. The email is filed into a specific folder and marked as unread### INSTALLATION  1. Download the .workflow file somewhere on your filesystem.  2. Double click on it.  3. You should be good to go. :)### LICENSE(The MIT License)Copyright © 2014 Aaron Bach bachya1208@gmail.comPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.Version 2.1June 27, 2014*)on run {input, parameters}(* ======================================// USER SWITCHES ======================================*)		-- The Mail account that has the aforementioned mailbox	set destination_account to "Fourwindsinteractive"		-- The Mail mailbox into which the message gets filed	set destination_mailbox to "Archive"	   (*     ======================================    // MAIN PROGRAM    // (don't edit below this line)    ======================================    *)	tell application "Mail"		repeat with aMessage in input			set theTitle to the subject of aMessage			set theNotes to the content of aMessage			set theCombinedBody to "message://%3c" &amp; message id of aMessage &amp; "%3e" &amp; return &amp; return &amp; theNotes						tell application "OmniFocus" to tell default document				set newTaskProps to {name:"Respond to Email: " &amp; theTitle}				if theCombinedBody is not missing value then set newTaskProps to newTaskProps &amp; {note:theCombinedBody}				make new inbox task with properties newTaskProps			end tell						set flagged status of aMessage to true			move aMessage to mailbox destination_mailbox of account destination_account		end repeat	end tell		return inputend run</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>20E4EABB-FA10-42CC-BAD2-847F679A9182</string>
+				<key>Keywords</key>
+				<array>
+					<string>Run</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>F26FC943-B16E-4730-AFE0-55F489F4C5B5</string>
+				<key>UUID</key>
+				<string>4F310B0E-18B7-448A-AFA4-482FF7A78A97</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>442.000000:333.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict>
+		<key>A60CE6A1-E736-474E-B890-0BE68EC1788F</key>
+		<dict>
+			<key>from</key>
+			<string>2BBD4479-BD69-42E1-98DD-A11D9F979281 - 2BBD4479-BD69-42E1-98DD-A11D9F979281</string>
+			<key>to</key>
+			<string>4F310B0E-18B7-448A-AFA4-482FF7A78A97 - 4F310B0E-18B7-448A-AFA4-482FF7A78A97</string>
+		</dict>
+	</dict>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>serviceApplicationBundleID</key>
+		<string>com.apple.mail</string>
+		<key>serviceApplicationPath</key>
+		<string>/Applications/Mail.app</string>
+		<key>serviceInputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>serviceOutputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>serviceProcessesInput</key>
+		<integer>0</integer>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.servicesMenu</string>
+	</dict>
+</dict>
+</plist>
